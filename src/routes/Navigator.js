@@ -5,7 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from "../screens/Home";
 import QuestionsScreen from "../screens/Questions";
 import LoginScreen from "../screens/Login";
-import Icon from 'react-native-ionicons'
+import {MaterialIcons} from '@expo/vector-icons';
 
 const homeName = 'Home';
 const loginName = 'Login';
@@ -24,13 +24,13 @@ export default function Navigator(){
                     let rn = route.name;
 
                     if(rn === homeName){
-                        iconName = focused ? 'home' : 'home-outline';
+                        iconName = 'home';
                     } else if (rn === loginName){
-                        iconName = focused ? 'list' : 'list-outline';
+                        iconName = 'login';
                     } else if (rn === questionsName){
-                        iconName = focused ? 'settings' : 'settings-outline';
+                        iconName = 'question-answer';
                     }
-                    return <Icon name={iconName}/>
+                    return <MaterialIcons name={iconName}/>
                 }
             })}
             >
