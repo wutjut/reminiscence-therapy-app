@@ -7,6 +7,10 @@ import questions from '../questions/questions';
 
 const Card = ({card}) => (
   <View style={styles.card}>
+      <Image
+          source ={card.image}
+          style={styles.logo}
+      />
      <Text>{card.text}</Text>
     </View>
 )
@@ -46,6 +50,11 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     //alignItems: 'center,'
+  },
+  logo: {
+    width: '45%',
+    height: '45%',
+    resizeMode: 'contain',
   },
   card: {
     flex: 0.45,
