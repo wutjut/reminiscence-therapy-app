@@ -4,6 +4,8 @@ import { Button, View, Text, Image, StyleSheet } from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 import Swiper from 'react-native-deck-swiper';
 import questions from '../questions/questions';
+import { CheckBox } from 'react-native-elements'
+import FormInput from '../Components/FormInput';
 
 const Card = ({card}) => (
   <View style={styles.card}>
@@ -11,7 +13,16 @@ const Card = ({card}) => (
           source ={card.image}
           style={styles.logo}
       />
+      <View style={styles.space} />
      <Text>{card.text}</Text>
+     <View style={styles.space} />
+     <Button 
+      style={styles.sect}
+      title="Get Answer"
+      color="#841584"
+      accessibilityLabel="Learn more about this purple button"
+      onPress={() => alert(card.answer)}
+    />
     </View>
 )
 
@@ -56,6 +67,9 @@ const styles = StyleSheet.create({
     height: '45%',
     resizeMode: 'contain',
   },
+  sect:{
+    padding: 8,
+  },
   card: {
     flex: 0.45,
     borderRadius: 8,
@@ -65,6 +79,10 @@ const styles = StyleSheet.create({
     shadowOffset: {width: 0, height: 0},
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#fff'
-  }
+    backgroundColor: '#fff',
+  },
+  space: {
+    width: 20,
+    height: 20,
+  },
 })
