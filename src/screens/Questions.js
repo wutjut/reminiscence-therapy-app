@@ -6,6 +6,7 @@ import Swiper from 'react-native-deck-swiper';
 import questions from '../questions/questions';
 import { CheckBox } from 'react-native-elements'
 import FormInput from '../Components/FormInput';
+import data from '../card-data/data';
 
 const Card = ({card}) => (
   <View style={styles.card}>
@@ -14,7 +15,7 @@ const Card = ({card}) => (
           style={styles.logo}
       />
       <View style={styles.space} />
-     <Text>{card.text}</Text>
+     <Text>{card.name}</Text>
      <View style={styles.space} />
      <Button 
       style={styles.sect}
@@ -37,10 +38,14 @@ export default class QuestionsScreen extends React.Component {
     this.setState({index: this.state.index+1});
   }
   render() {
+    const decade = this.props.route.params.decade;
+    console.log(decade);
+    // filter js file by decade
+    const cardData = data.filter(obj=> obj.decade == decade);
     return (
       <View style={styles.container}>
         <Swiper
-          cards={questions}
+          cards={cardData}
           cardIndex={this.state.index}
           renderCard={(card) => <Card card={card}/>}
           onSwiped={this.onSwiped}
