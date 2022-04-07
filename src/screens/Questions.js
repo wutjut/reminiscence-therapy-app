@@ -38,10 +38,12 @@ export default class QuestionsScreen extends React.Component {
     this.setState({index: this.state.index+1});
   }
   render() {
+    // get decade parameter passed from home screen
     const decade = this.props.route.params.decade;
     console.log(decade);
-    // filter js file by decade
+    // filter dajs file by decade
     const cardData = data.filter(obj=> obj.decade == decade);
+
     return (
       <View style={styles.container}>
         <Swiper

@@ -1,7 +1,23 @@
 export default [
     {
-        name: "this shouldn't show if i clicked on 40s",
+        name: "this shouldn't show if i clicked on 40s or 30s",
         decade: 50,
+        // media: require('../assets/dataImages/'),
+        mediaType: "image",
+        desc: "",
+        swiped: false
+    },
+    {
+        name: "this shouldn't show if i clicked on 30s or 50s",
+        decade: 40,
+        // media: require('../assets/dataImages/'),
+        mediaType: "image",
+        desc: "",
+        swiped: false
+    },
+    {
+        name: "this shouldn't show if i clicked on 40s or 50s",
+        decade: 30,
         // media: require('../assets/dataImages/'),
         mediaType: "image",
         desc: "",
@@ -51,7 +67,7 @@ export default [
         name: "Cat People",
         decade: 40,
         // media: require('../assets/dataImages/'),
-        medaiType: "image",
+        mediaType: "image",
         desc: "",
         swiped: false
     },
