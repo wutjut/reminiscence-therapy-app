@@ -1,17 +1,21 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import Navigator from './routes/Navigator';
+import QuestionsScreen from './screens/Questions';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import HomeScreen from './screens/Home';
 
-
+const AuthStack = createStackNavigator();
 
 export default function App() {
   return (
-    // <View style={styles.container}>
-    //   <Text>Open up App.js to start working on your app!</Text>
-    //   <StatusBar style="auto" />
-    // </View>
-    
-    <Navigator></Navigator>
+    <NavigationContainer>
+      <AuthStack.Navigator>
+        <AuthStack.Screen name="Home" component={HomeScreen}/>
+        <AuthStack.Screen name="Questions" component={QuestionsScreen}/>
+      </AuthStack.Navigator>
+    </NavigationContainer>
   );
 }
 
