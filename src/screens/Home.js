@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, View, Text, FlatList, StyleSheet, Image } from 'react-native';
+import { Button, View, Text, FlatList, StyleSheet, Image, ImageBackground } from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 import dust_bowl from '../assets/dust_bowl.jpg';
 import ww2 from '../assets/WW2.jpg';
@@ -19,18 +19,21 @@ const decades = [
 
 export default function Home({navigation}) {
   return (
-    <View style={{flex:1, paddingTop: 10}}>
+    <View style={{flex:1}}>
       <FlatList
-        numColumns={3}
+        numColumns={2}
         data={decades}
         keyExtractor={(item, index) => index.toString()}
         renderItem={({item}) => ( 
           <View 
-          style={{alignItems: 'center', height: 300, alignItems: 'center',justifyContent:'center', flex: 1, margin: 1, backgroundColor: '#D3D3D3', cursor: 'pointer'}}
+          style={{height: 200, alignItems: 'center', flex: 1, margin: 4, backgroundColor: '#D3D3D3', cursor: 'pointer'}}
            onClick={() => navigation.push('Questions', { decade: item.decade })}
           >
-            <Image style={{height: 200, width: '70%'}} source={item.image} />
-            <Text>{item.text}</Text>
+            {/* <Image style={{height: 100, width: '70%'}} source={item.image} />
+            <Text>{item.text}</Text> */}
+                <ImageBackground source={item.image} resizeMode="cover" style={{flex: 1, width: '100%'}}>
+                <Text style={{fontWeight: 'bold', color: 'white', backgroundColor: "#000000c0", textAlign: "center", fontSize: 30, position: 'absolute', bottom: 0, width: '100%'}}>{item.text}</Text>
+             </ImageBackground>
           </View>
          )}
       />
