@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, View, Text, FlatList, StyleSheet, Image, ImageBackground } from 'react-native';
+import { Button, View, Text, FlatList, StyleSheet, Image, ImageBackground, TouchableOpacity } from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 import dust_bowl from '../assets/dust_bowl.jpg';
 import ww2 from '../assets/WW2.jpg';
@@ -25,16 +25,14 @@ export default function Home({navigation}) {
         data={decades}
         keyExtractor={(item, index) => index.toString()}
         renderItem={({item}) => ( 
-          <View 
+          <TouchableOpacity 
           style={{height: 200, alignItems: 'center', flex: 1, margin: 4, backgroundColor: '#D3D3D3', cursor: 'pointer'}}
-           onClick={() => navigation.push('Questions', { decade: item.decade })}
+           onPress={() => navigation.push('Questions', { decade: item.decade })}
           >
-            {/* <Image style={{height: 100, width: '70%'}} source={item.image} />
-            <Text>{item.text}</Text> */}
                 <ImageBackground source={item.image} resizeMode="cover" style={{flex: 1, width: '100%'}}>
                 <Text style={{fontWeight: 'bold', color: 'white', backgroundColor: "#000000c0", textAlign: "center", fontSize: 30, position: 'absolute', bottom: 0, width: '100%'}}>{item.text}</Text>
              </ImageBackground>
-          </View>
+          </TouchableOpacity>
          )}
       />
     </View>
