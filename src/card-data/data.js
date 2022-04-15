@@ -5,7 +5,8 @@ export default [
         // media: require('../assets/dataImages/'),
         mediaType: "image",
         desc: "",
-        swiped: false
+        swiped: false,
+        answer: "answer",
     },
     {
         name: "this shouldn't show if i clicked on 30s or 50s",
@@ -13,7 +14,8 @@ export default [
         // media: require('../assets/dataImages/'),
         mediaType: "image",
         desc: "",
-        swiped: false
+        swiped: false,
+        answer: "answer",
     },
     {
         name: "this shouldn't show if i clicked on 40s or 50s",
@@ -21,7 +23,8 @@ export default [
         // media: require('../assets/dataImages/'),
         mediaType: "image",
         desc: "",
-        swiped: false
+        swiped: false,
+        answer: "answer",
     },
     {
         name: "Pinocchio",
@@ -29,7 +32,8 @@ export default [
         // media: require('../assets/dataImages/'),
         mediaType: "image",
         desc: "",
-        swiped: false
+        swiped: false,
+        answer: "answer",
     },
     {
         name: "Fantasia",
@@ -37,7 +41,8 @@ export default [
         // media: require('../assets/dataImages/'),
         mediaType: "image",
         desc: "",
-        swiped: false
+        swiped: false,
+        answer: "answer",
     },
     {
         name: "Dumbo",
@@ -45,7 +50,8 @@ export default [
         // media: require('../assets/dataImages/'),
         mediaType: "image",
         desc: "",
-        swiped: false
+        swiped: false,
+        answer: "answer",
     },
     {
         name: "Bambi",
@@ -53,7 +59,8 @@ export default [
         // media: require('../assets/dataImages/'),
         mediaType: "image",
         desc: "",
-        swiped: false
+        swiped: false,
+        answer: "answer",
     },
     {
         name: "Miracle on 34th Street",
@@ -61,7 +68,8 @@ export default [
         // media: require('../assets/dataImages/'),
         mediaType: "image",
         desc: "",
-        swiped: false
+        swiped: false,
+        answer: "answer",
     },
     {
         name: "Cat People",
@@ -69,7 +77,8 @@ export default [
         // media: require('../assets/dataImages/'),
         mediaType: "image",
         desc: "",
-        swiped: false
+        swiped: false,
+        answer: "answer",
     },
     {
         name: "Citizen Kane",
@@ -77,6 +86,7 @@ export default [
         // media: require('../assets/dataImages/'),
         mediaType: "image",
         desc: "",
-        swiped: false
+        swiped: false,
+        answer: "answer",
     },
 ]

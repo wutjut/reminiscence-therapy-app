@@ -8,13 +8,21 @@ import FormInput from '../Components/FormInput';
 import data from '../card-data/data';
 import { Audio } from 'expo-av';
 
+function dispAnswer(disp){
+    disp = true
+}
 
-export default function Card({card}) {
+function dispQuestion(disp){
+  disp = false
+}
+
+export default function Card({card, props}) {
     // function playSound(){
     //     const playbackObj = new Audio.Sound();
     //     playbackObj.loadAsync({uri: "http://ra01.sycdn.kuwo.cn/resource/n3/32/56/3260586875.mp3"}, {shouldPlay: true});
     // }
   const [sound, setSound] = React.useState();
+  const [disp, setDisp] = React.useState();
 
   async function playSound() {
     console.log('Loading Sound');
@@ -33,25 +41,40 @@ export default function Card({card}) {
           sound.unloadAsync(); }
       : undefined;
   }, [sound]);
-  return (
-    <View style={styles.card}>
-      <Image
-          source ={card.image}
-          style={styles.logo}
-      />
+  if(!disp){
+    return (
+      <View style={styles.card}>
+        <Image
+            source ={card.image}
+            style={styles.logo}
+        />
+        <View style={styles.space} />
+      <Text>{card.name}</Text>
       <View style={styles.space} />
-     <Text>{card.name}</Text>
-     <View style={styles.space} />
-     <Button 
-      style={styles.sect}
-      title="Get Answer"
-      color="#841584"
-      accessibilityLabel="Learn more about this purple button"
-      onPress={() => alert(card.answer)}
-    />
-      <Button title="Play Sound" onPress={playSound} />
-    </View>
-  )
+      <Button 
+        style={styles.sect}
+        title="Get Answer"
+        color="#841584"
+        accessibilityLabel="Learn more about this purple button"
+        onPress={() => setDisp(true)}
+      />
+        <Button title="Play Sound" onPress={playSound} />
+      </View>
+    )
+    } else {
+      return (
+        <View style={styles.card}>
+            <Text>{card.answer}</Text>
+            <Button 
+              style={styles.sect}
+              title="Return"
+              color="#841584"
+              accessibilityLabel="Learn more about this purple button"
+              onPress={() => setDisp(false)}
+            />
+        </View>
+      )
+    }
 }
 
 const styles = StyleSheet.create({
