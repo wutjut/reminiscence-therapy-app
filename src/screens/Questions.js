@@ -7,7 +7,7 @@ import Card from './Card';
 import questions from '../questions/questions';
 import { CheckBox } from 'react-native-elements'
 import FormInput from '../Components/FormInput';
-import data from '../card-data/data';
+import data from '../card-data/final_data';
 
 
 export default class QuestionsScreen extends React.Component {

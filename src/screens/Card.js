@@ -42,6 +42,7 @@ export default function Card({card, props}) {
       : undefined;
   }, [sound]);
   if(!disp){
+    if(card.mediaType == "Image"){
     return (
       <View style={styles.card}>
         <Image
@@ -49,7 +50,7 @@ export default function Card({card, props}) {
             style={styles.logo}
         />
         <View style={styles.space} />
-      <Text>{card.name}</Text>
+      <Text>{card.text}</Text>
       <View style={styles.space} />
       <Button 
         style={styles.sect}
@@ -58,9 +59,37 @@ export default function Card({card, props}) {
         accessibilityLabel="Learn more about this purple button"
         onPress={() => setDisp(true)}
       />
-        <Button title="Play Sound" onPress={playSound} />
       </View>
-    )
+    )} else if (card.mediaType == "Audio") {
+      return (
+        <View style={styles.card}>
+        <Text>{card.text}</Text>
+        <View style={styles.space} />
+        <Button 
+          style={styles.sect}
+          title="Get Answer"
+          color="#841584"
+          accessibilityLabel="Learn more about this purple button"
+          onPress={() => setDisp(true)}
+        />
+          <Button title="Play Sound" onPress={playSound} />
+        </View>
+      )
+    } else {
+      return (
+        <View style={styles.card}>
+        <Text>{card.text}</Text>
+        <View style={styles.space} />
+        <Button 
+          style={styles.sect}
+          title="Get Answer"
+          color="#841584"
+          accessibilityLabel="Learn more about this purple button"
+          onPress={() => setDisp(true)}
+        />
+        </View>
+      )
+    }
     } else {
       return (
         <View style={styles.card}>
