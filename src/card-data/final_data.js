@@ -10,7 +10,7 @@ export default [
     {
         text: "What does this photo mean to you?",
         mediaType: "Image",
-        image: "https://www.whizzpast.com/wp-content/uploads/2015/02/best1930spics.jpg",
+        image: {uri: "https://www.whizzpast.com/wp-content/uploads/2015/02/best1930spics.jpg"},
         audio: "",
         answer: "Prohibition",
         decade: "30"
@@ -66,7 +66,7 @@ export default [
     {
         text: "What does this photo mean to you?",
         mediaType: "Image",
-        image: "https://imgix.ranker.com/user_node_img/68/1352970/original/katharine-hepburn-theater-actors-photo-u29?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=650",
+        image: {uri:"https://imgix.ranker.com/user_node_img/68/1352970/original/katharine-hepburn-theater-actors-photo-u29?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=650"},
         audio: "",
         answer: "Actress Katharine Hepburn",
         decade: "30"
@@ -90,7 +90,7 @@ export default [
     {
         text: "What does this photo mean to you?",
         mediaType: "Image",
-        image: "https://www.archives.gov/files/exhibits/powers-of-persuasion/images/13229_2011_001_AC.jpg",
+        image: {uri:"https://www.archives.gov/files/exhibits/powers-of-persuasion/images/13229_2011_001_AC.jpg"},
         audio: "",
         answer: "World War II Propoganda",
         decade: "40"
@@ -154,7 +154,7 @@ export default [
     {
         text: "What does this photo mean to you?",
         mediaType: "Image",
-        image: "https://www.biography.com/.image/t_share/MTgwMTU2NjQxNTU4MTQ0MzQ0/gettyimages-517324714.jpg",
+        image: {uri:"https://www.biography.com/.image/t_share/MTgwMTU2NjQxNTU4MTQ0MzQ0/gettyimages-517324714.jpg"},
         audio: "",
         answer: "American Professional Baseball player Babe Ruth",
         decade: "40"
@@ -162,7 +162,7 @@ export default [
     {
         text: "What does this photo mean to you?",
         mediaType: "Image",
-        image: "https://allthatsinteresting.com/wordpress/wp-content/uploads/2012/08/elvis-1950s.jpg",
+        image: {uri:"https://allthatsinteresting.com/wordpress/wp-content/uploads/2012/08/elvis-1950s.jpg"},
         audio: "",
         answer: "Pop Culture Icon Elvis Presley",
         decade: "50"
@@ -250,7 +250,7 @@ export default [
     {
         text: "What does this photo mean to you?",
         mediaType: "Image",
-        image: "https://static.stacker.com/s3fs-public/styles/slide_desktop/s3/Cropped60sImagesFlintstonesPMZ2.png",
+        image: {uri:"https://static.stacker.com/s3fs-public/styles/slide_desktop/s3/Cropped60sImagesFlintstonesPMZ2.png"},
         audio: "",
         answer: "The Flintstones",
         decade: "60"
@@ -314,7 +314,7 @@ export default [
     {
         text: "What does this photo mean to you?",
         mediaType: "Image",
-        image: "https://media.gettyimages.com/photos/woman-running-through-the-mud-at-the-woodstock-music-festival-new-us-picture-id1161372043?s=2048x2048",
+        image: {uri:"https://media.gettyimages.com/photos/woman-running-through-the-mud-at-the-woodstock-music-festival-new-us-picture-id1161372043?s=2048x2048"},
         audio: "",
         answer: "Woodstock Music Festival",
         decade: "60"
@@ -330,7 +330,7 @@ export default [
     {
         text: "What does this photo mean to you?",
         mediaType: "Image",
-        image: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/head-coach-don-shula-and-nick-bouniconti-of-the-miami-news-photo-1573860198.jpg?crop=1xw:1xh;center,top&resize=980:",
+        image: {uri:"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/head-coach-don-shula-and-nick-bouniconti-of-the-miami-news-photo-1573860198.jpg?crop=1xw:1xh;center,top&resize=980:"},
         audio: "",
         answer: "Miami Dolphins win Super Bowl VII",
         decade: "70"
@@ -394,7 +394,7 @@ export default [
     {
         text: "What does this photo mean to you?",
         mediaType: "Image",
-        image: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/british-actor-robert-shaw-on-the-set-of-jaws-directed-by-news-photo-1573929653.jpg?crop=1xw:1xh;center,top&resize=980:*",
+        image: {uri:"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/british-actor-robert-shaw-on-the-set-of-jaws-directed-by-news-photo-1573929653.jpg?crop=1xw:1xh;center,top&resize=980:*"},
         audio: "",
         answer: "Popular film 'Jaws'",
         decade: "70"
@@ -410,7 +410,7 @@ export default [
     {
         text: "What does this photo mean to you?",
         mediaType: "Image",
-        image: "https://www.rd.com/wp-content/uploads/2018/09/shutterstock_1599997a-scaled.jpg?resize=1000,1536",
+        image: {uri:"https://www.rd.com/wp-content/uploads/2018/09/shutterstock_1599997a-scaled.jpg?resize=1000,1536"},
         audio: "",
         answer: "Michael Jackson",
         decade: "80"
@@ -466,7 +466,7 @@ export default [
     {
         text: "What does this photo mean to you?",
         mediaType: "Image",
-        image: "https://media.gettyimages.com/photos/team-usa-celebrates-their-43-victory-over-the-soviet-union-in-the-picture-id1392799?s=2048x2048",
+        image: {uri:"https://media.gettyimages.com/photos/team-usa-celebrates-their-43-victory-over-the-soviet-union-in-the-picture-id1392799?s=2048x2048"},
         audio: "",
         answer: "Team USA Victory over Soviet Union in the 'Miracle on Ice'",
         decade: "80"

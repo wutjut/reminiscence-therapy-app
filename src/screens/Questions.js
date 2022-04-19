@@ -48,8 +48,7 @@ export default class QuestionsScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    //alignItems: 'center,'
+    height: 600
   },
   logo: {
     width: '45%',
@@ -68,7 +67,7 @@ const styles = StyleSheet.create({
     shadowOffset: {width: 0, height: 0},
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#fff',
+
   },
   space: {
     width: 20,
