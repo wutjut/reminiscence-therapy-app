@@ -3,14 +3,14 @@ export default [
         text: "Name this song!",
         mediaType: "Audio",
         image: "",
-        audio: "https://ia600606.us.archive.org/20/items/78_over-the-rainbow_judy-garland-victor-young-and-his-orchestra-harold-arlen-e.-y.-har_gbia0004863a/Over%20The%20Rainbow%20-%20Judy%20Garland%20-%20Victor%20Young%20and%20his%20Orchestra-restored.flac",
+        audio: {uri: "https://ia600606.us.archive.org/20/items/78_over-the-rainbow_judy-garland-victor-young-and-his-orchestra-harold-arlen-e.-y.-har_gbia0004863a/Over%20The%20Rainbow%20-%20Judy%20Garland%20-%20Victor%20Young%20and%20his%20Orchestra-restored.flac"},
         answer: "Over the Rainbow",
         decade: "30"
     },
     {
         text: "What does this photo mean to you?",
         mediaType: "Image",
-        image: "https://www.whizzpast.com/wp-content/uploads/2015/02/best1930spics.jpg",
+        image: {uri: "https://www.whizzpast.com/wp-content/uploads/2015/02/best1930spics.jpg"},
         audio: "",
         answer: "Prohibition",
         decade: "30"
@@ -66,7 +66,7 @@ export default [
     {
         text: "What does this photo mean to you?",
         mediaType: "Image",
-        image: "https://imgix.ranker.com/user_node_img/68/1352970/original/katharine-hepburn-theater-actors-photo-u29?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=650",
+        image: {uri: "https://imgix.ranker.com/user_node_img/68/1352970/original/katharine-hepburn-theater-actors-photo-u29?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=650"},
         audio: "",
         answer: "Actress Katharine Hepburn",
         decade: "30"
@@ -75,7 +75,7 @@ export default [
         text: "Name this song!",
         mediaType: "Audio",
         image: "",
-        audio: "https://ia803104.us.archive.org/9/items/cd_heartbreak-hotel_elvis-presley/disc1/01.%20Elvis%20Presley%20-%20Heartbreak%20Hotel_sample.mp3",
+        audio: {uri: "https://ia803104.us.archive.org/9/items/cd_heartbreak-hotel_elvis-presley/disc1/01.%20Elvis%20Presley%20-%20Heartbreak%20Hotel_sample.mp3"},
         answer: "Whistle While You Work by Adriana Caselotti",
         decade: "30"
     },
@@ -83,14 +83,14 @@ export default [
         text: "Name this song!",
         mediaType: "Audio",
         image: "",
-        audio: "https://ia902807.us.archive.org/34/items/78_choreography_danny-kaye-the-skylarks-irving-berlin-joseph-j-lilley_gbia0071173/10%20-%20White%20Christmas%20%28Finale%29%20-%20Bing%20Crosby%20-%20Danny%20Kaye-restored.flac",
+        audio: {uri: "https://ia902807.us.archive.org/34/items/78_choreography_danny-kaye-the-skylarks-irving-berlin-joseph-j-lilley_gbia0071173/10%20-%20White%20Christmas%20%28Finale%29%20-%20Bing%20Crosby%20-%20Danny%20Kaye-restored.flac"},
         answer: "White Christmas",
         decade: "40"
     },
     {
         text: "What does this photo mean to you?",
         mediaType: "Image",
-        image: "https://www.archives.gov/files/exhibits/powers-of-persuasion/images/13229_2011_001_AC.jpg",
+        image: {uri: "https://www.archives.gov/files/exhibits/powers-of-persuasion/images/13229_2011_001_AC.jpg"},
         audio: "",
         answer: "World War II Propoganda",
         decade: "40"
@@ -147,14 +147,14 @@ export default [
         text: "Name this song!",
         mediaType: "Audio",
         image: "",
-        audio: "https://ia802301.us.archive.org/32/items/lp_take-the-a-train_duke-ellington/disc1/01.01.%20Take%20The%20%22A%22%20Train_sample.mp3",
+        audio: {uri: "https://ia802301.us.archive.org/32/items/lp_take-the-a-train_duke-ellington/disc1/01.01.%20Take%20The%20%22A%22%20Train_sample.mp3"},
         answer: "Take the 'A' Train by Duke Ellington",
         decade: "40"
     },
     {
         text: "What does this photo mean to you?",
         mediaType: "Image",
-        image: "https://www.biography.com/.image/t_share/MTgwMTU2NjQxNTU4MTQ0MzQ0/gettyimages-517324714.jpg",
+        image: {uri: "https://www.biography.com/.image/t_share/MTgwMTU2NjQxNTU4MTQ0MzQ0/gettyimages-517324714.jpg"},
         audio: "",
         answer: "American Professional Baseball player Babe Ruth",
         decade: "40"
@@ -162,7 +162,7 @@ export default [
     {
         text: "What does this photo mean to you?",
         mediaType: "Image",
-        image: "https://allthatsinteresting.com/wordpress/wp-content/uploads/2012/08/elvis-1950s.jpg",
+        image: {uri: "https://allthatsinteresting.com/wordpress/wp-content/uploads/2012/08/elvis-1950s.jpg"},
         audio: "",
         answer: "Pop Culture Icon Elvis Presley",
         decade: "50"
@@ -171,7 +171,7 @@ export default [
         text: "Name this song!",
         mediaType: "Audio",
         image: "",
-        audio: "https://ia803104.us.archive.org/9/items/cd_heartbreak-hotel_elvis-presley/disc1/01.%20Elvis%20Presley%20-%20Heartbreak%20Hotel_sample.mp3",
+        audio: {uri: "https://ia803104.us.archive.org/9/items/cd_heartbreak-hotel_elvis-presley/disc1/01.%20Elvis%20Presley%20-%20Heartbreak%20Hotel_sample.mp3"},
         answer: "Heartbreak Hotel",
         decade: "50"
     },
@@ -235,7 +235,7 @@ export default [
         text: "Name this song!",
         mediaType: "Audio",
         image: "",
-        audio: "https://ia804509.us.archive.org/10/items/lp_autumn-leaves-the-best-of-roger-williams_roger-williams/disc1/01.01.%20Autumn%20Leaves_sample.mp3",
+        audio: {uri: "https://ia804509.us.archive.org/10/items/lp_autumn-leaves-the-best-of-roger-williams_roger-williams/disc1/01.01.%20Autumn%20Leaves_sample.mp3"},
         answer: "Autumn Leaves by Roger Williams",
         decade: "50"
     },
@@ -243,14 +243,14 @@ export default [
         text: "Name this song!",
         mediaType: "Audio",
         image: "",
-        audio: "https://ia601608.us.archive.org/2/items/THE_ROLLING_STONES_I_Cant_Get_No_Satisfaction_1965/THE_ROLLING_STONES_I_Cant_Get_No_Satisfaction_1965.mp4",
+        audio: {uri: "https://ia601608.us.archive.org/2/items/THE_ROLLING_STONES_I_Cant_Get_No_Satisfaction_1965/THE_ROLLING_STONES_I_Cant_Get_No_Satisfaction_1965.mp4"},
         answer: "(I Can't Get No) Satisfaction",
         decade: "60"
     },
     {
         text: "What does this photo mean to you?",
         mediaType: "Image",
-        image: "https://static.stacker.com/s3fs-public/styles/slide_desktop/s3/Cropped60sImagesFlintstonesPMZ2.png",
+        image: {uri: "https://static.stacker.com/s3fs-public/styles/slide_desktop/s3/Cropped60sImagesFlintstonesPMZ2.png"},
         audio: "",
         answer: "The Flintstones",
         decade: "60"
@@ -307,14 +307,14 @@ export default [
         text: "Name this song!",
         mediaType: "Audio",
         image: "",
-        audio: "https://ia600602.us.archive.org/30/items/THE_BEACH_BOYS_I_Get_Around_1964/THE_BEACH_BOYS_I_Get_Around_1964.mp4",
+        audio: {uri: "https://ia600602.us.archive.org/30/items/THE_BEACH_BOYS_I_Get_Around_1964/THE_BEACH_BOYS_I_Get_Around_1964.mp4"},
         answer: "I Get Around by The Beach Boys",
         decade: "60"
     },
     {
         text: "What does this photo mean to you?",
         mediaType: "Image",
-        image: "https://media.gettyimages.com/photos/woman-running-through-the-mud-at-the-woodstock-music-festival-new-us-picture-id1161372043?s=2048x2048",
+        image: {uri: "https://media.gettyimages.com/photos/woman-running-through-the-mud-at-the-woodstock-music-festival-new-us-picture-id1161372043?s=2048x2048"},
         audio: "",
         answer: "Woodstock Music Festival",
         decade: "60"
@@ -323,14 +323,14 @@ export default [
         text: "Name this song!",
         mediaType: "Audio",
         image: "",
-        audio: "https://ia903100.us.archive.org/7/items/queen-bohemian-rhapsody_202106/QUEEN%20Bohemian%20Rhapsody.mp4",
+        audio: {uri: "https://ia903100.us.archive.org/7/items/queen-bohemian-rhapsody_202106/QUEEN%20Bohemian%20Rhapsody.mp4"},
         answer: "Bohemian Rhapsody",
         decade: "70"
     },
     {
         text: "What does this photo mean to you?",
         mediaType: "Image",
-        image: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/head-coach-don-shula-and-nick-bouniconti-of-the-miami-news-photo-1573860198.jpg?crop=1xw:1xh;center,top&resize=980:",
+        image: {uri: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/head-coach-don-shula-and-nick-bouniconti-of-the-miami-news-photo-1573860198.jpg?crop=1xw:1xh;center,top&resize=980:"},
         audio: "",
         answer: "Miami Dolphins win Super Bowl VII",
         decade: "70"
@@ -387,14 +387,14 @@ export default [
         text: "Name this song!",
         mediaType: "Audio",
         image: "",
-        audio: "https://ia601305.us.archive.org/35/items/cd_billboard-top-rb-hits---1970_various_201504/90-0168/Various%20%281989%29%20Billboard%20Top%20R%26B%20Hits%20-%201970/04%20-%20Diana%20Ross%20-%20Ain%27t%20No%20Mountain%20High%20Enough_sample.mp3",
+        audio: {uri: "https://ia601305.us.archive.org/35/items/cd_billboard-top-rb-hits---1970_various_201504/90-0168/Various%20%281989%29%20Billboard%20Top%20R%26B%20Hits%20-%201970/04%20-%20Diana%20Ross%20-%20Ain%27t%20No%20Mountain%20High%20Enough_sample.mp3"},
         answer: "Ain't No Mountain High Enough by Diana Ross",
         decade: "70"
     },
     {
         text: "What does this photo mean to you?",
         mediaType: "Image",
-        image: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/british-actor-robert-shaw-on-the-set-of-jaws-directed-by-news-photo-1573929653.jpg?crop=1xw:1xh;center,top&resize=980:*",
+        image: {uri: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/british-actor-robert-shaw-on-the-set-of-jaws-directed-by-news-photo-1573929653.jpg?crop=1xw:1xh;center,top&resize=980:*"},
         audio: "",
         answer: "Popular film 'Jaws'",
         decade: "70"
@@ -403,14 +403,14 @@ export default [
         text: "Name this song!",
         mediaType: "Audio",
         image: "",
-        audio: "https://ia803403.us.archive.org/31/items/michael-jackson-billie-jean/MICHAEL%20JACKSON%20%20Billie%20Jean.mp4",
+        audio: {uri: "https://ia803403.us.archive.org/31/items/michael-jackson-billie-jean/MICHAEL%20JACKSON%20%20Billie%20Jean.mp4"},
         answer: "Billie Jean",
         decade: "80"
     },
     {
         text: "What does this photo mean to you?",
         mediaType: "Image",
-        image: "https://www.rd.com/wp-content/uploads/2018/09/shutterstock_1599997a-scaled.jpg?resize=1000,1536",
+        image: {uri: "https://www.rd.com/wp-content/uploads/2018/09/shutterstock_1599997a-scaled.jpg?resize=1000,1536"},
         audio: "",
         answer: "Michael Jackson",
         decade: "80"
@@ -466,7 +466,7 @@ export default [
     {
         text: "What does this photo mean to you?",
         mediaType: "Image",
-        image: "https://media.gettyimages.com/photos/team-usa-celebrates-their-43-victory-over-the-soviet-union-in-the-picture-id1392799?s=2048x2048",
+        image: {uri: "https://media.gettyimages.com/photos/team-usa-celebrates-their-43-victory-over-the-soviet-union-in-the-picture-id1392799?s=2048x2048"},
         audio: "",
         answer: "Team USA Victory over Soviet Union in the 'Miracle on Ice'",
         decade: "80"
@@ -475,7 +475,7 @@ export default [
         text: "Name this song!",
         mediaType: "Audio",
         image: "",
-        audio: "https://ia801604.us.archive.org/6/items/Queen_Crazy_Little_Thing_Called_Love/Queen_Crazy_Little_Thing_Called_Love.mp4",
+        audio: {uri: "https://ia801604.us.archive.org/6/items/Queen_Crazy_Little_Thing_Called_Love/Queen_Crazy_Little_Thing_Called_Love.mp4"},
         answer: "Crazy Little Thing Called Love by Queen",
         decade: "80"
     },

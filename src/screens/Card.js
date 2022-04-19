@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, View, Text, Image, StyleSheet } from 'react-native';
+import { Button, View, Text, Image, StyleSheet, Sound } from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 import Swiper from 'react-native-deck-swiper';
 import questions from '../questions/questions';
@@ -27,13 +27,14 @@ export default function Card({card, props}) {
   async function playSound() {
     console.log('Loading Sound');
     const { sound } = await Audio.Sound.createAsync(
-       require('../assets/sample-9s.mp3')
+       //require('../assets/sample-9s.mp3')
+       card.audio
     );
     setSound(sound);
 
     console.log('Playing Sound');
     await sound.playAsync(); }
-
+    
   React.useEffect(() => {
     return sound
       ? () => {
