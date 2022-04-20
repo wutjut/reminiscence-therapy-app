@@ -6,6 +6,7 @@ import questions from '../questions/questions';
 import { CheckBox } from 'react-native-elements'
 import FormInput from '../Components/FormInput';
 import data from '../card-data/data';
+import vinyl_record from '../assets/vinyl_record.jpg';
 import { Audio } from 'expo-av';
 
 function dispAnswer(disp){
@@ -64,7 +65,9 @@ export default function Card({card, props}) {
     )} else if (card.mediaType == "Audio") {
       return (
         <View style={styles.card}>
-        <Text>{card.text}</Text>
+        <Image source={vinyl_record} style={{width: '100%', height: 250}}/>
+        <Button title="Play Sound" onPress={playSound} />
+        <Text style={{fontSize: 25}}>{card.text}</Text>
         <View style={styles.space} />
         <Button 
           style={styles.sect}
@@ -73,7 +76,6 @@ export default function Card({card, props}) {
           accessibilityLabel="Learn more about this purple button"
           onPress={() => setDisp(true)}
         />
-          <Button title="Play Sound" onPress={playSound} />
         </View>
       )
     } else {
@@ -110,8 +112,6 @@ export default function Card({card, props}) {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#fff',
-      //alignItems: 'center,'
     },
     logo: {
       width: '45%',
@@ -130,7 +130,8 @@ const styles = StyleSheet.create({
       shadowOffset: {width: 0, height: 0},
       justifyContent: 'center',
       alignItems: 'center',
-      backgroundColor: '#fff',
+      backgroundColor: 'white',
+      height: 600
     },
     space: {
       width: 20,
