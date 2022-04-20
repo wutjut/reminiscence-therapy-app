@@ -71,8 +71,7 @@ export default function Card({card}) {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#D3D3D3',
-      //alignItems: 'center,'
+      backgroundColor: 'white'
     },
     logo: {
       width: '45%',
@@ -92,7 +91,8 @@ const styles = StyleSheet.create({
       shadowOffset: {width: -2, height: 10},
       justifyContent: 'center',
       alignItems: 'center',
-      backgroundColor: '#fff',
+      backgroundColor: 'grey',
+
     },
     space: {
       width: 20,
