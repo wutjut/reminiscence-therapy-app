@@ -6,7 +6,7 @@ import questions from '../questions/questions';
 import { CheckBox } from 'react-native-elements'
 import FormInput from '../Components/FormInput';
 import data from '../card-data/data';
-import vinyl_record from '../assets/vinyl_record.jpg';
+import vinyl_record from '../assets/vynl.jpg';
 import { Audio } from 'expo-av';
 
 function dispAnswer(disp){
@@ -45,13 +45,13 @@ export default function Card({card, props}) {
   if(!disp){
     if(card.mediaType == "Image"){
     return (
-      <View style={styles.card}>
+      <View style={styles.card} >
         <Image
             source ={card.image}
-            style={styles.logo}
+            style={{width: '100%', height: 250}}
         />
         <View style={styles.space} />
-      <Text>{card.text}</Text>
+      <Text style={{fontSize: 25, textAlign: 'center'}}>{card.text}</Text>
       <View style={styles.space} />
       <Button 
         style={styles.sect}
@@ -66,10 +66,9 @@ export default function Card({card, props}) {
         <View style={styles.card}>
         <Image source={vinyl_record} style={{width: '100%', height: 250}}/>
         <Button title="Play Sound" onPress={playSound} />
-        <Text style={{fontSize: 25}}>{card.text}</Text>
+        <Text style={{fontSize: 25, textAlign: "center"}}>{card.text}</Text>
         <View style={styles.space} />
         <Button 
-          style={styles.sect}
           title="Get Answer"
           color="#841584"
           accessibilityLabel="Learn more about this purple button"
@@ -80,7 +79,7 @@ export default function Card({card, props}) {
     } else {
       return (
         <View style={styles.card}>
-        <Text>{card.text}</Text>
+        <Text style={{fontSize: 25, textAlign: "center", padding: 15}}>{card.text}</Text>
         <View style={styles.space} />
         <Button 
           style={styles.sect}
@@ -118,7 +117,7 @@ const styles = StyleSheet.create({
       resizeMode: 'contain',
     },
     sect:{
-      padding: 8,
+      padding: 1,
     },
     card: {
       flex: 0.45,
