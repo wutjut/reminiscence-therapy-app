@@ -69,8 +69,9 @@ export default function Card({card, props}) {
         <Text style={{fontSize: 25, textAlign: "center"}}>{card.text}</Text>
         <View style={styles.space} />
         <Button 
+          style={{backgroundColor: 'green'}}
           title="Get Answer"
-          color="#841584"
+          color="blue"
           accessibilityLabel="Learn more about this purple button"
           onPress={() => setDisp(true)}
         />
@@ -84,7 +85,7 @@ export default function Card({card, props}) {
         <Button 
           style={styles.sect}
           title="Get Answer"
-          color="#841584"
+          color="blue"
           accessibilityLabel="Learn more about this purple button"
           onPress={() => setDisp(true)}
         />
@@ -98,7 +99,7 @@ export default function Card({card, props}) {
             <Button 
               style={styles.sect}
               title="Return"
-              color="#841584"
+              color="blue"
               accessibilityLabel="Learn more about this purple button"
               onPress={() => setDisp(false)}
             />
@@ -120,7 +121,7 @@ const styles = StyleSheet.create({
       padding: 1,
     },
     card: {
-      flex: 0.45,
+      // flex: 0.5,
       borderRadius: 8,
       shadowRadius: 25,
       shadowColor: '#000',
@@ -129,7 +130,7 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       alignItems: 'center',
       backgroundColor: 'white',
-      height: 600
+      height: 410
     },
     space: {
       width: 20,

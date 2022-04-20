@@ -48,6 +48,6 @@ export default class QuestionsScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: 'white',
-    marginTop: 50
+    marginTop: 50,
   },
 })
