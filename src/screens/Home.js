@@ -74,9 +74,10 @@ export default function Home({navigation}) {
 
 const styles = StyleSheet.create({
   centeredView: {
-    flex: 1,
+    // flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    flexDirection: "center",
     marginTop: 22
   },
   modalView: {
@@ -96,7 +97,7 @@ const styles = StyleSheet.create({
   },
   button: {
     borderRadius: 20,
-    padding: 10,
+    padding: 15,
     elevation: 2
   },
   buttonOpen: {
