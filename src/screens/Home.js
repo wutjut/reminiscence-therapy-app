@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState, Component } from 'react';
 import { Button, View, Text, FlatList, StyleSheet, Image, ImageBackground, TouchableOpacity } from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 import dust_bowl from '../assets/dust_bowl.jpg';
@@ -7,7 +7,8 @@ import presley from '../assets/Presley.jpg';
 import moon_landing from '../assets/moon_landing.jpg';
 import watergate from '../assets/Watergate.jpg';
 import berlin_wall from '../assets/berlin_wall.jpg';
-
+import { RECORDING_OPTIONS_PRESET_HIGH_QUALITY } from 'expo-av/build/Audio';
+import { Modal, Pressable } from 'react-native';
 const decades = [
   {decade: 30, text: '1930s', image: dust_bowl},
   {decade: 40, text: '1940s', image: ww2},
@@ -18,7 +19,38 @@ const decades = [
 ];
 
 export default function Home({navigation}) {
+  const [modalVisible, setModalVisible] = useState(false);
   return (
+    <>
+    <View style={styles.centeredView}>
+      <Modal
+        animationType="slide"
+        transparent={true}
+        visible={modalVisible}
+        onRequestClose={() => {
+          Alert.alert("Modal has been closed.");
+          setModalVisible(!modalVisible);
+        }}
+      >
+        <View style={styles.centeredView}>
+          <View style={styles.modalView}>
+            <Text style={styles.modalText}>Click on a decade and get started!</Text>
+            <Pressable
+              style={[styles.button, styles.buttonClose]}
+              onPress={() => setModalVisible(!modalVisible)}
+            >
+              <Text style={styles.textStyle}>Close</Text>
+            </Pressable>
+          </View>
+        </View>
+      </Modal>
+      <Pressable
+        style={[styles.button, styles.buttonOpen]}
+        onPress={() => setModalVisible(true)}
+      >
+        <Text style={styles.textStyle}>Help</Text>
+      </Pressable>
+    </View>
     <View style={{flex:1}}>
       <FlatList
         numColumns={2}
@@ -36,6 +68,50 @@ export default function Home({navigation}) {
          )}
       />
     </View>
+    </>
   )
 }
 
+const styles = StyleSheet.create({
+  centeredView: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 22
+  },
+  modalView: {
+    margin: 20,
+    backgroundColor: "white",
+    borderRadius: 20,
+    padding: 35,
+    alignItems: "center",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5
+  },
+  button: {
+    borderRadius: 20,
+    padding: 10,
+    elevation: 2
+  },
+  buttonOpen: {
+    backgroundColor: "#2196F3",
+  },
+  buttonClose: {
+    backgroundColor: "#2196F3",
+  },
+  textStyle: {
+    color: "white",
+    fontWeight: "bold",
+    textAlign: "center"
+  },
+  modalText: {
+    marginBottom: 15,
+    textAlign: "center"
+  }
+});
