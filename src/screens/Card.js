@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Button, View, Text, Image, StyleSheet, Sound } from 'react-native';
+import React, { Component, useRef, useState } from 'react';
+import { Button, View, Text, Image, StyleSheet, Sound, Animated, TouchableOpacity } from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 import Swiper from 'react-native-deck-swiper';
 import questions from '../questions/questions';
@@ -24,6 +24,28 @@ export default function Card({card, props}) {
     // }
   const [sound, setSound] = React.useState();
   const [disp, setDisp] = React.useState();
+  const animate = useRef(new Animated.Value(0));
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  const handleFlip = () => {
+    Animated.timing(animate.current, {
+      duration: 300,
+      toValue: isFlipped ? 0 : 180,
+      useNativeDriver: true
+    }).start(() => {
+      setIsFlipped(!isFlipped);
+    })
+  }
+  
+  const interpolateFront = animate.current.interpolate({
+    inputRange: [0,180],
+    outputRange: ['0deg', '180deg']
+  })
+
+  const interpolateBack = animate.current.interpolate({
+    inputRange: [0,180],
+    outputRange: ['180deg', '360deg']
+  })
 
   async function playSound() {
     console.log('Loading Sound');
@@ -43,68 +65,60 @@ export default function Card({card, props}) {
           sound.unloadAsync(); }
       : undefined;
   }, [sound]);
-  if(!disp){
     if(card.mediaType == "Image"){
     return (
-      <View style={styles.card} >
+      <View>
+      <TouchableOpacity onPress={handleFlip} activeOpacity={1} style={[{transform: [{rotateY: interpolateFront}]},styles.card, styles.hidden]} >
         <Image
+            resizeMode='contain'
             source ={card.image}
-            style={{width: '100%', height: 250}}
+            style={{width: '100%', height: 275}}
         />
         <View style={styles.space} />
       <Text style={{fontSize: 25, textAlign: 'center'}}>{card.text}</Text>
       <View style={styles.space} />
-      <Button 
-        style={styles.sect}
-        title="Get Answer"
-        color="#841584"
-        accessibilityLabel="Learn more about this purple button"
-        onPress={() => setDisp(true)}
-      />
+      </TouchableOpacity>
+      <TouchableOpacity onPress={handleFlip} activeOpacity={1} style={[{transform: [{rotateY: interpolateBack}]},styles.card,styles.hidden, {position: 'absolute', top: 0}]} >
+        <View style={styles.space} />
+      <Text style={{fontSize: 25, textAlign: 'center'}}>{card.answer}</Text>
+      <View style={styles.space} />
+      </TouchableOpacity>
       </View>
     )} else if (card.mediaType == "Audio") {
       return (
-        <View style={styles.card}>
-        <Image source={vinyl_record} style={{width: '100%', height: 250}}/>
-        <Button title="Play Sound" onPress={playSound} />
-        <Text style={{fontSize: 25, textAlign: "center"}}>{card.text}</Text>
-        <View style={styles.space} />
-        <Button 
-          style={{backgroundColor: 'green'}}
-          title="Get Answer"
-          color="blue"
-          accessibilityLabel="Learn more about this purple button"
-          onPress={() => setDisp(true)}
+        <View>
+      <TouchableOpacity onPress={handleFlip} activeOpacity={1} style={[{transform: [{rotateY: interpolateFront}]},styles.card, styles.hidden]} >
+        <Image
+            resizeMode='contain'
+            source ={vinyl_record}
+            style={{width: '100%', height: 275}}
         />
-        </View>
+        <Button title="Play Song" onPress={playSound}/>
+        <View style={styles.space} />
+      <Text style={{fontSize: 25, textAlign: 'center'}}>{card.text}</Text>
+      <View style={styles.space} />
+      </TouchableOpacity>
+      <TouchableOpacity onPress={handleFlip} activeOpacity={1} style={[{transform: [{rotateY: interpolateBack}]},styles.card,styles.hidden, {position: 'absolute', top: 0}]} >
+        <View style={styles.space} />
+      <Text style={{fontSize: 25, textAlign: 'center'}}>{card.answer}</Text>
+      <View style={styles.space} />
+      </TouchableOpacity>
+      </View>
       )
     } else {
       return (
-        <View style={styles.card}>
-        <Text style={{fontSize: 25, textAlign: "center", padding: 15}}>{card.text}</Text>
+        <View>
+      <TouchableOpacity onPress={handleFlip} activeOpacity={1} style={[{transform: [{rotateY: interpolateFront}]},styles.card, styles.hidden]} >
         <View style={styles.space} />
-        <Button 
-          style={styles.sect}
-          title="Get Answer"
-          color="blue"
-          accessibilityLabel="Learn more about this purple button"
-          onPress={() => setDisp(true)}
-        />
-        </View>
-      )
-    }
-    } else {
-      return (
-        <View style={styles.card}>
-            <Text>{card.answer}</Text>
-            <Button 
-              style={styles.sect}
-              title="Return"
-              color="blue"
-              accessibilityLabel="Learn more about this purple button"
-              onPress={() => setDisp(false)}
-            />
-        </View>
+      <Text style={{fontSize: 25, textAlign: 'center'}}>{card.text}</Text>
+      <View style={styles.space} />
+      </TouchableOpacity>
+      <TouchableOpacity onPress={handleFlip} activeOpacity={1} style={[{transform: [{rotateY: interpolateBack}]},styles.card,styles.hidden, {position: 'absolute', top: 0}]} >
+        <View style={styles.space} />
+      <Text style={{fontSize: 25, textAlign: 'center'}}>{card.answer}</Text>
+      <View style={styles.space} />
+      </TouchableOpacity>
+      </View>
       )
     }
 }
@@ -131,10 +145,14 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       alignItems: 'center',
       backgroundColor: 'white',
-      height: 410
+      height: 410,
+      width: 350
     },
     space: {
       width: 20,
       height: 20,
     },
+    hidden: {
+      backfaceVisibility: 'hidden'
+    }
   })
