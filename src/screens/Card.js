@@ -96,7 +96,7 @@ export default function Card({card, props}) {
     } else {
       return (
         <View style={styles.card}>
-            <Text>{card.answer}</Text>
+            <Text style={{fontSize: 25, textAlign: "center"}}>{card.answer}</Text>
             <Button 
               style={styles.sect}
               title="Return"
