@@ -19,7 +19,7 @@ export default class QuestionsScreen extends React.Component {
     const decade = this.props.route.params.decade;
     // filter dajs file by decade
     const cardData = data.filter((obj) => obj.decade == decade);
-    if (this.state.index == cardData.length - 1) {
+    if (this.state.index == cardData.length) {
       return (
         <View style={{ justifyContent: "center", height: "100%" }}>
           <Text style={styles.text}>You've reached the end of the deck</Text>
